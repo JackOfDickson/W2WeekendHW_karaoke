@@ -14,6 +14,9 @@ class Room:
     def check_current_song(self):
         return self.current_song
 
-    # def queue_song(self, song):
+    def queue_song(self, song):
+        self.song_queue.append(song)
+        if self.current_song == None:
+            self.current_song = self.song_queue.pop(0)
     
 
