@@ -6,7 +6,8 @@ from src.song import Song
 class RoomTest(unittest.TestCase):
     def setUp(self):
         self.room1 = Room(1)
-        self.guest1 = Guest("Kiryu Kazuma")
+        self.guest1 = Guest("Kazuma Kiryu")
+        self.guest2 = Guest("Goro Majima")
         self.song1 = Song("Judgement", 227, "rock")
     
     def test_room_has_number(self):

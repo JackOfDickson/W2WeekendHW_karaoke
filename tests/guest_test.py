@@ -3,7 +3,7 @@ from src.guest import Guest
 
 class GuestTest(unittest.TestCase):
     def setUp(self):
-        self.guest1 = Guest("Kiryu Kazuma")
+        self.guest1 = Guest("Kazuma Kiryu")
     
     def test_guest_has_name(self):
-        self.assertEqual("Kiryu Kazuma", self.guest1.name)
+        self.assertEqual("Kazuma Kiryu", self.guest1.name)
