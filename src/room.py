@@ -5,10 +5,10 @@ class Room:
         self.current_song = None
         self.song_queue = []
     
-    def add_guest(self, guest):
+    def check_in_guest(self, guest):
         self.guests.append(guest)
     
-    def remove_guest(self, guest):
+    def check_out_guest(self, guest):
         self.guests.remove(guest)
 
     def check_current_song(self):
