@@ -29,6 +29,15 @@ class RoomTest(unittest.TestCase):
 
         self.assertEqual(1, len(self.room1.guests))
     
+    def test_remove_guest_from_room(self):
+        self.room1.add_guest(self.guest1)
+        self.room1.add_guest(self.guest2)
+        duet_room = len(self.room1.guests)
+
+        self.room1.remove_guest(self.guest1)
+        self.assertEqual(2, duet_room)
+        self.assertEqual(1, len(self.room1.guests))
+    
     def test_check_current_song_when_nothing_has_been_queued(self):
         check_song = self.room1.check_current_song()
 

@@ -7,6 +7,9 @@ class Room:
     
     def add_guest(self, guest):
         self.guests.append(guest)
+    
+    def remove_guest(self, guest):
+        self.guests.remove(guest)
 
     def check_current_song(self):
         return self.current_song
