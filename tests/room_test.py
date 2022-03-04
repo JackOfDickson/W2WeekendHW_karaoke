@@ -6,10 +6,11 @@ from src.song import Song
 class RoomTest(unittest.TestCase):
     def setUp(self):
         self.room1 = Room(1)
-        self.guest1 = Guest("Kazuma Kiryu")
-        self.guest2 = Guest("Goro Majima")
         self.song1 = Song("Judgement", 123, "rock")
         self.song2 = Song("Baka Mitai", 121, "pop")
+        self.guest1 = Guest("Kazuma Kiryu", "Judgement")
+        self.guest2 = Guest("Goro Majima", "Get to the Top!")
+
     
     def test_room_has_number(self):
         self.assertEqual(1, self.room1.room_number)
