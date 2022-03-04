@@ -5,7 +5,7 @@ from src.song import Song
 
 class RoomTest(unittest.TestCase):
     def setUp(self):
-        self.room1 = Room(1)
+        self.room1 = Room(1, 2)
         self.song1 = Song("Judgement", 123, "rock")
         self.song2 = Song("Baka Mitai", 121, "pop")
         self.guest1 = Guest("Kazuma Kiryu", "Judgement")
@@ -23,6 +23,9 @@ class RoomTest(unittest.TestCase):
     
     def test_room_has_empty_song_queue(self):
         self.assertEqual(0, len(self.room1.song_queue))
+    
+    def test_room_has_capacity(self):
+        self.assertEqual(2, self.room1.capactiy)
 
 #TESTING METHODS
 
