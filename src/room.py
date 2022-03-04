@@ -7,7 +7,11 @@ class Room:
         self.song_queue = []
     
     def check_in_guest(self, guest):
-        self.guests.append(guest)
+        if len(self.guests) < self.capactiy:
+            self.guests.append(guest)
+        else:
+            return f"room{self.room_number} is full, it has a capacity of {self.capactiy} people"
+
     
     def check_out_guest(self, guest):
         self.guests.remove(guest)

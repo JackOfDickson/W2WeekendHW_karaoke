@@ -10,6 +10,7 @@ class RoomTest(unittest.TestCase):
         self.song2 = Song("Baka Mitai", 121, "pop")
         self.guest1 = Guest("Kazuma Kiryu", "Judgement")
         self.guest2 = Guest("Goro Majima", "Get to the Top!")
+        self.guest3 = Guest("Ichiban kasuga", "The Future I Dreamed of")
 
     
     def test_room_has_number(self):
@@ -44,6 +45,13 @@ class RoomTest(unittest.TestCase):
         self.room1.check_out_guest(self.guest1)
         self.assertEqual(2, duet_room)
         self.assertEqual(1, len(self.room1.guests))
+    
+    def test_full_room(self):
+        self.room1.check_in_guest(self.guest1)
+        self.room1.check_in_guest(self.guest2)
+        self.room1.check_in_guest(self.guest3)
+
+        self.assertEqual(2, len(self.room1.guests))
     
     #Song Related Tests
     
