@@ -1,4 +1,3 @@
-from shutil import move
 import unittest
 
 from src.karaoke_venue import KaraokeVenue
