@@ -14,7 +14,7 @@ class KaraokeVenue:
     def guest_leave_lobby(self, guest):
         self.lobby.remove(guest)
 
-    def set_up_room(self, room):
+    def open_up_room(self, room):
         self.rooms.append(room)
 
 

@@ -31,15 +31,17 @@ class KaraokeVenueTest(unittest.TestCase):
         self.like_a_dragon.guest_enter_lobby(self.guest1)
         self.assertEqual([self.guest1], self.like_a_dragon.lobby)
 
-    def tests_set_up_room(self):
-        self.like_a_dragon.set_up_room(self.room1)
+    def tests_open_up_room(self):
+        self.like_a_dragon.open_up_room(self.room1)
         self.assertEqual([self.room1], self.like_a_dragon.rooms)
 
 
-    # def test_guests_can_move_from_lobby_into_a_room(self):
-    #     self.like_a_dragon.guest_enter_lobby(self.guest1)
-    #     self.like_a_dragon.move_guest_from_lobby(self.room1, self.guest1)
+    def test_guests_can_move_from_lobby_into_a_room(self):
+        self.like_a_dragon.open_up_room(self.room1)
+        self.like_a_dragon.guest_enter_lobby(self.guest1)
+        self.like_a_dragon.move_guest_from_lobby(self.room1, self.guest1)
 
-    #     self.assertEqual([self.guest1], self.like_a_dragon.rooms[0])
+        self.assertEqual([self.guest1], self.room1.guests)
+        self.assertEqual(self.room1, self.like_a_dragon.rooms[0])
 
     # def test_guests_can_move_from_room_into_lobby(self):
