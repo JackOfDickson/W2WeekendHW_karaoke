@@ -8,9 +8,9 @@ class RoomTest(unittest.TestCase):
         self.room1 = Room("1", 2)
         self.song1 = Song("Judgement", 123, "rock")
         self.song2 = Song("Baka Mitai", 121, "pop")
-        self.guest1 = Guest("Kazuma Kiryu", "Judgement")
-        self.guest2 = Guest("Goro Majima", "Get to the Top!")
-        self.guest3 = Guest("Ichiban kasuga", "The Future I Dreamed of")
+        self.guest1 = Guest("Kazuma Kiryu", "Judgement", 2000)
+        self.guest2 = Guest("Goro Majima", "Get to the Top!", 5656565)
+        self.guest3 = Guest("Ichiban kasuga", "The Future I Dreamed of", 0)
 
     
     def test_room_has_number(self):

@@ -1,5 +1,5 @@
 class KaraokeVenue:
-    def __init__(self, name, till) -> None:
+    def __init__(self, name, till):
         self.name = name
         self.till = till
         self.lobby = []
