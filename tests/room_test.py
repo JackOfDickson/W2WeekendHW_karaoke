@@ -5,12 +5,12 @@ from src.song import Song
 
 class RoomTest(unittest.TestCase):
     def setUp(self):
-        self.room1 = Room("1", 2)
+        self.room1 = Room("1", 2, 100)
         self.song1 = Song("Judgement", 123, "rock")
         self.song2 = Song("Baka Mitai", 121, "pop")
-        self.guest1 = Guest("Kazuma Kiryu", "Judgement", 2000)
+        self.guest1 = Guest("Kazuma Kiryu", "Judgement", 2005)
         self.guest2 = Guest("Goro Majima", "Get to the Top!", 5656565)
-        self.guest3 = Guest("Ichiban kasuga", "The Future I Dreamed of", 0)
+        self.guest3 = Guest("Ichiban kasuga", "The Future I Dreamed of", 101)
 
     
     def test_room_has_number(self):
@@ -27,6 +27,9 @@ class RoomTest(unittest.TestCase):
     
     def test_room_has_capacity(self):
         self.assertEqual(2, self.room1.capactiy)
+    
+    def test_room_has_entry_fee(self):
+        self.assertEqual(100, self.room1.entry_fee)
 
 #TESTING METHODS
 

@@ -3,7 +3,7 @@ from src.guest import Guest
 
 class GuestTest(unittest.TestCase):
     def setUp(self):
-        self.guest1 = Guest("Kazuma Kiryu", "Judgement", 2000)
+        self.guest1 = Guest("Kazuma Kiryu", "Judgement", 2005)
     
     def test_guest_has_name(self):
         self.assertEqual("Kazuma Kiryu", self.guest1.name)
@@ -14,4 +14,4 @@ class GuestTest(unittest.TestCase):
         self.assertEqual(cheer, "whoo! I love Judgement!")
     
     def test_guest_has_wallet(self):
-        self.assertEqual(2000, self.guest1.wallet)
+        self.assertEqual(2005, self.guest1.wallet)

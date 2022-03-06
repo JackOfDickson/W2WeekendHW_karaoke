@@ -8,10 +8,10 @@ from src.room import Room
 class KaraokeVenueTest(unittest.TestCase):
     def setUp(self):
         self.like_a_dragon = KaraokeVenue("Like a Dragon", 2000)
-        self.room1 = Room(1, 2)
-        self.guest1 = Guest("Kazuma Kiryu", "Judgement", 2000)
+        self.room1 = Room(1, 2, 100)
+        self.guest1 = Guest("Kazuma Kiryu", "Judgement", 2005)
         self.guest2 = Guest("Goro Majima", "Get to the Top!", 565656565)
-        self.guest3 = Guest("Ichiban kasuga", "The Future I Dreamed of", 0)
+        self.guest3 = Guest("Ichiban kasuga", "The Future I Dreamed of", 1)
 
     def test_check_venue_has_name(self):
         self.assertEqual("Like a Dragon", self.like_a_dragon.name)
